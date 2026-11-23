@@ -13,8 +13,7 @@ API_ID = int(os.environ["API_ID"])
 API_HASH = os.environ["API_HASH"]
 SESSION_STRING = os.environ["SESSION_STRING"]
 SERVICE_KEY = os.environ["SERVICE_KEY"]
-print("SESSION LENGTH:", len(SESSION_STRING))
-print("SESSION EMPTY:", not bool(SESSION_STRING.strip()))
+
 client = TelegramClient(StringSession(SESSION_STRING), API_ID, API_HASH)
 check_lock = asyncio.Lock()
 
